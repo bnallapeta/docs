@@ -101,6 +101,9 @@ jobs:
             fi
 
             if [[ "$BRANCH" == "main" ]]; then
+              # gh-pages may have a legacy *version* named `head`; mike then errors with
+              # "alias 'head' already specified as a version" when we pass `head` as an alias.
+              mike delete head --push 2>/dev/null || true
               mike deploy -t "next" --update-aliases --push --alias-type=copy next head
 
             elif [[ "$BRANCH" == "release-v1.8.0" ]]; then
