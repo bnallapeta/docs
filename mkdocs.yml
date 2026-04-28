@@ -115,6 +115,9 @@ plugins:
         admin/upgrade/upgrade-to-1-1-0.md: admin/upgrade/upgrade-to-1-1-1.md
         admin/access/credentials/credentials-propogation.md: admin/access/credentials/credentials-propagation.md
         credentials-propogation.md: admin/access/credentials/credentials-propagation.md
+  - beacon-search:
+      api_url: https://search-api.main.beacon.us2.amazee.io
+      product: k0rdent
 
 
 nav:
